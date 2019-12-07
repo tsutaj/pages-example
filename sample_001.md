@@ -3,8 +3,6 @@ layout: page
 title: Sample 1
 ---
 
-# GitHub Pages Sample 1
-
 このページは [Competitive Programming Advent Calendar 2019](#) [TODO: url] の記事のために作られました。 [GitHub Pages](https://help.github.com/ja/github/working-with-github-pages/about-github-pages) に組み込まれている静的サイトジェネレータである [Jekyll](https://jekyllrb.com/) を利用した、Markdown の HTML 化のサンプルです。
 
 GitHub Pages に関する設定の変更を行う際は、主に `./_config.yml` を編集します。主な設定項目については [\_config.yml の設定について](./about_config.html) を参照してください。
