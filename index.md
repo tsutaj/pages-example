@@ -2,7 +2,6 @@
 layout: home
 ---
 
-# GitHub Pages Samples
+GitHub Pages Samples for [Competitive Programming (1) Advent Calendar 2019](https://adventar.org/calendars/3865)
 
-For ``Competitive Programming Advent Calendar 2019''
-
+* [記事へのリンク](#) [TODO: url]
