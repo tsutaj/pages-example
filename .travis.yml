@@ -1,0 +1,13 @@
+language: ruby
+rvm:
+  - 2.5.1
+before_install:
+  - gem install bundler -v 2.0.2
+install:
+  - bundle install
+
+script: bundle exec rake site:deploy --quiet
+
+# travis の bundle を高速化 (毎回やらないようにする)
+cache: bundler
+bundler_args: --without production --deployment
