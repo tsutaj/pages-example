@@ -25,12 +25,15 @@ GitHub アカウントを持っていない人は [GitHub に登録](https://git
     - 例えば `repo` という名前のリポジトリを作ると、各ページは `https://[username].github.io/[repo]/` 直下にビルドされます。
     - サイトの公開元が `master` や `gh-pages` などから選べます (`gh-pages` というブランチが存在する場合、それがデフォルトで選択されます)
 
+ここでは `homepage` というリポジトリを作成し、`gh-pages` に push することを考えます (つまり後者の方法です)
 
 ### `_config.yml` の追加
 
 GitHub Pages で使用している静的サイトジェネレーター Jekyll の設定をするために `_config.yml` というファイルを作成します。ここで解説されている設定事項はほんの一部分ですので、もっと見たい方は [構成・設定 \| Jekyll](http://jekyllrb-ja.github.io/docs/configuration/) などを参照してください。
 
-#### テーマの変更
+また、ここに書かれている内容をすべてまとめたものは [tsutaj/pages-example/\_config.yml](https://github.com/tsutaj/pages-example/blob/master/_config.yml) にあります。
+
+#### テーマの設定
 
 GitHub Pages において標準で用意されているテーマがいくつか存在します。一覧は [Supported themes \| GitHub Pages](https://pages.github.com/themes/) を参照してください。
 
@@ -62,7 +65,7 @@ exclude:
 
 ### コンテンツの追加
 
-試しに、本リポジトリをコンテンツとして追加してビルドしてみましょう。CI と連携させるかさせないかで手順の量が少し違います。
+試しに、本リポジトリをコンテンツとして `homepage` リポジトリの `gh-pages` ブランチに追加してビルドしてみましょう。CI と連携させるかさせないかで手順の量が少し違います。
 
 * [Sample 1 までを追加する方法 (CI 連携なし)](./sample_001.html)
 * [Sample 2 までを追加する方法 (CI 連携あり)](./sample_002.html)
