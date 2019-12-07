@@ -3,6 +3,8 @@ layout: default
 title: Getting Started
 ---
 
+# Getting Started
+
 [GitHub Pages](https://help.github.com/ja/github/working-with-github-pages/about-github-pages) と、それに組み込まれている静的サイトジェネレータである [Jekyll](https://jekyllrb.com/) を利用して、Markdown を HTML 化してホームページを作成してみましょう。
 
 * this unordered seed list will be replaced by toc as unordered list

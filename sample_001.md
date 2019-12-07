@@ -3,6 +3,8 @@ layout: default
 title: Sample 1
 ---
 
+# Sample 1: CI 連携なし
+
 **このファイルは `gh-pages` ブランチに push するだけで HTML 化されるはずです。**
 
 以下は Markdown 記法テストです。主な記法を知りたい方は、[Markdown 記法 チートシート](https://gist.github.com/mignonstyle/083c9e1651d7734f84c99b8cf49d57fa) などを参考にしてください。
