@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Sample 2 | pages-example</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="Sample 2" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Competitive Programming Advent Calendar 2019 用のリポジトリ" />
+<meta property="og:description" content="Competitive Programming Advent Calendar 2019 用のリポジトリ" />
+<meta property="og:site_name" content="pages-example" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"/pages-example/sample_002.html","headline":"Sample 2","description":"Competitive Programming Advent Calendar 2019 用のリポジトリ","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/pages-example/assets/css/style.css?v=">
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="/pages-example/">pages-example</a></h1>
+        
+        
+
+        <p>Competitive Programming Advent Calendar 2019 用のリポジトリ</p>
+
+        
+        <p class="view"><a href="https://github.com/tsutaj/pages-example/">View the Project on GitHub <small>tsutaj/pages-example</small></a></p>
+        
+
+        
+
+        
+        <ul>
+          <li><a href="https://github.com/tsutaj/pages-example/archive/master.zip">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/tsutaj/pages-example/archive/master.tar.gz">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/tsutaj/pages-example/">View On <strong>GitHub</strong></a></li>
+        </ul>
+        
+      </header>
+      <section>
+
+      <h1 id="sample-2-ci-連携あり">Sample 2: CI 連携あり</h1>
+
+<p>突然ですが、以下の「ここをクリック」と書かれている箇所をクリックしてみてください。隠されていたコンテンツが表示されるようになるはずです。</p>
+
+<details><summary><strong>ここをクリック</strong></summary>
+<ul>
+  <li><strong>これは隠されたコンテンツです</strong></li>
+  <li><strong>「ここをクリック」を押すことで表示されたはずです</strong></li>
+  <li><strong>「ここをクリック」をもう一度押すと、再び隠れます</strong></li>
+</ul>
+</details>
+
+<p></p>
+
+<p>この機能は Jekyll に備わっている機能ではなく、自分で追加したプラグインによって実現されています (このプラグインは <a href="http://movb.de/jekyll-details-support.html">Adding support for HTML5’s details element to Jekyll</a> に記載されている内容を参考に作成されたものです)。このように、Jekyll は自分の手で機能を拡張することができます。</p>
+
+<p>しかし、セキュリティの観点から GitHub Pages では自分で追加したプラグインをビルドできません。これでは困るので、CI (継続的インテグレーション) を活用して自作のプラグインも使えるようにしてみましょう。</p>
+
+<p>以下で説明されている内容は <a href="https://github.com/mfenner/jekyll-travis">jekyll-travis</a> の README を基に作成されており、本リポジトリ内の <code class="highlighter-rouge">.travis.yml</code> や <code class="highlighter-rouge">Rakefile</code> 等のファイルは <code class="highlighter-rouge">jekyll-travis</code> リポジトリから拝借したものです。詳細な説明がほしい方はこちらのリポジトリの README をご覧ください。また、プラグインの具体的な作成方法については <a href="http://jekyllrb-ja.github.io/docs/plugins/">プラグイン | Jekyll</a> に委ねますので参考にしてください。</p>
+
+<h2 id="travis-ci-の準備">Travis CI の準備</h2>
+
+<p>まず、<a href="https://travis-ci.com">Travis CI</a> へアクセスして、自分が利用している GitHub アカウントの情報をもとに登録を済ませてください。</p>
+
+<p>登録したての状態で Travis CI の Dashboard に行くと、「GitHub Apps Integration」と出ているはずです。緑の「Activate」というボタンをクリックします。</p>
+
+<p><img src="./assets/img/s2-001.png" alt="Travis CI の Dashboard 画面" /></p>
+
+<p>すると、どのリポジトリに Travis CI をインストールするか聞かれます。CI を適用したいリポジトリが含まれるように選択し、「Approve &amp; Install」をクリックします。</p>
+
+<p><img src="./assets/img/s2-002.png" alt="Travis CI のインストール画面" /></p>
+
+<p>これで Travis CI のインストールは完了です。Dashboard にリポジトリが表示されるようになったと思いますので、リポジトリを選択してリンク先に飛び、「More Oprions → Settings」をクリックします。すると、Environment Variables (環境変数) を設定する項目がありますので、以下を入力します。<strong>DISPLAY VALUE IN BUILD LOG にチェックを入れないように注意してください。</strong></p>
+
+<ul>
+  <li><code class="highlighter-rouge">GIT_NAME</code> (GitHub アカウント名)</li>
+  <li><code class="highlighter-rouge">GIT_EMAIL</code> (アカウント名に紐付けられているメールアドレス)</li>
+  <li><code class="highlighter-rouge">GH_TOKEN</code> (Personal Access Token)
+    <ul>
+      <li>Token を自分で発行する必要があります。詳しくは <a href="https://help.github.com/ja/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line">コマンドライン用の個人アクセストークンを作成する - GitHub ヘルプ</a> を参照してください。</li>
+      <li>commit や push が目的なので、Token に付与する権限は <code class="highlighter-rouge">repo</code> のみでよいです。</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="./assets/img/s2-003.png" alt="環境変数の入力画面" /></p>
+
+<p>これで、Travis CI を利用する準備ができました。</p>
+
+<h2 id="ビルドしてみよう">ビルドしてみよう</h2>
+
+<p>Sample 1 まででは GitHub Pages が勝手にビルドしてくれていましたので <code class="highlighter-rouge">master</code> ブランチにあるものをそのままビルドさせていましたが、今回は GitHub Pages のビルド機能は使わずに CI を利用して自分でビルドさせます。生成元と生成先のブランチは異なるほうが嬉しいため、今回は <strong><code class="highlighter-rouge">master</code> ブランチに Markdown ファイルを置き、その内容を <code class="highlighter-rouge">gh-pages</code> ブランチにビルド</strong> させることにしましょう。</p>
+
+<p>Sample 1 では生成元ブランチを <code class="highlighter-rouge">master</code> にしていましたが、これを <code class="highlighter-rouge">gh-pages</code> ブランチに変更します。<code class="highlighter-rouge">gh-pages</code> ブランチを生成したら、<a href="./sample_001.html">Sample 1</a> における生成元ブランチの設定と同様に、<code class="highlighter-rouge">gh-pages</code> ブランチを代わりに生成元ブランチとして指定します。</p>
+
+<p>また、Sample 1 のときと同様に<code class="highlighter-rouge">_config.yml</code> は適宜自分の情報に差し替えてください。特に、CI を用いたビルドにおいて <code class="highlighter-rouge">Rakefile</code> 上で以下の変数を使用しますので、必ず設定を変更してください。</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">username</span><span class="pi">:</span> <span class="s">tsutaj</span> <span class="c1"># 自分の GitHub ユーザー名</span>
+<span class="na">repo</span><span class="pi">:</span> <span class="s">pages-example</span> <span class="c1"># リポジトリ名</span>
+<span class="na">destination</span><span class="pi">:</span> <span class="s">_site/</span> <span class="c1"># 基本的にいじる必要はないです</span>
+</code></pre></div></div>
+
+<p>Sample 1 で <code class="highlighter-rouge">sample_002.md</code> を exclude していた方は、再びその行をコメントアウトすることを忘れないでください。ここまで操作しましたら、<code class="highlighter-rouge">master</code> ブランチに push します。<code class="highlighter-rouge">gh-pages</code> ブランチへの push は <code class="highlighter-rouge">Rakefile</code> 等が Travis CI 上で自動でやってくれます。</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git add <span class="o">[</span>files]
+<span class="nv">$ </span>git commit <span class="nt">-m</span> <span class="s2">"add pages files"</span>
+<span class="nv">$ </span>git push origin HEAD
+</code></pre></div></div>
+
+<p>うまくいけば、<code class="highlighter-rouge">master</code> ブランチに push したものが <code class="highlighter-rouge">gh-pages</code> ブランチにビルドされるはずです。</p>
+
+
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/tsutaj/">tsutaj</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/pages-example/assets/js/scale.fix.js"></script>
+    
+  </body>
+</html>
