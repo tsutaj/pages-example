@@ -17,6 +17,7 @@ exclude:
 # リポジトリに関する情報を書く (Sample 2 のビルドに必要)
 username: tsutaj
 repo: pages-example
+destination: _site/
 
 # ///// 以下はリポジトリの都合上書いているだけ (Getting Started では説明しません) /////
 adc_url: 'https://adventar.org/calendars/3865'
