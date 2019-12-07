@@ -1,0 +1,6 @@
+# テーマの選択
+theme: jekyll-theme-minima
+# ビルドの対象から除外するファイル
+exclude:
+  - README.md
+
