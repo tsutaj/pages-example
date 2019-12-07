@@ -10,9 +10,11 @@ exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
-  - .bundle
-  - .sass-cache
+  - Rakefile
   - vendor
+  - .bundle
+  - .gitignore
+  - .sass-cache
 
 # リポジトリに関する情報を書く (Sample 2 のビルドに必要)
 username: tsutaj
@@ -22,6 +24,8 @@ destination: _site/
 # ///// 以下はリポジトリの都合上書いているだけ (Getting Started では説明しません) /////
 adc_url: 'https://adventar.org/calendars/3865'
 adc_article_url: '#'
+
+baseurl: '/pages-example/'
 show_downloads: true
 
 title: 'pages-example'
@@ -35,4 +39,3 @@ github:
   tar_url: 'https://github.com/tsutaj/pages-example/archive/master.tar.gz'
   owner_url: 'https://github.com/tsutaj/'
   owner_name: 'tsutaj'
-
