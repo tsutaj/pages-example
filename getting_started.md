@@ -25,13 +25,11 @@ GitHub アカウントを持っていない人は [GitHub に登録](https://git
     - 例えば `repo` という名前のリポジトリを作ると、各ページは `https://[username].github.io/[repo]/` 直下にビルドされます。
     - サイトの公開元が `master` や `gh-pages` などから選べます (`gh-pages` というブランチが存在する場合、それがデフォルトで選択されます)
 
-ここでは `homepage` というリポジトリを作成し、`gh-pages` に push することを考えます (つまり後者の命名方法です)
+ここでは `pages-example` というリポジトリを作成し、`master` に push することを考えます (つまり後者の命名方法です)
 
-### `_config.yml` の追加
+### `_config.yml` について
 
-GitHub Pages で使用している静的サイトジェネレーター Jekyll の設定をするために `_config.yml` というファイルを作成します。ここで解説されている設定事項はほんの一部分ですので、もっと見たい方は [構成・設定 \| Jekyll](http://jekyllrb-ja.github.io/docs/configuration/) などを参照してください。
-
-また、ここに書かれている内容をすべてまとめたものは [tsutaj/pages-example/\_config.yml](https://github.com/tsutaj/pages-example/blob/master/_config.yml) にあります。
+GitHub Pages で使用している静的サイトジェネレーター Jekyll の設定をするために `_config.yml` というファイルを作成します (実際にはすでにこのリポジトリに存在するため、1 から作る必要はありません)。ここで解説されている設定事項はほんの一部分ですので、もっと見たい方は [構成・設定 \| Jekyll](http://jekyllrb-ja.github.io/docs/configuration/) などを参照してください。
 
 #### テーマの設定
 
@@ -56,16 +54,20 @@ plugins:
 
 #### 特定ファイルをビルド対象から除外
 
-本リポジトリには `README.md` ファイルが含まれていますが、これは HTML 化される必要がなく、ビルド対象にしたくありません。このような場合、`exclude` でビルド対象から除外したいファイルを指定することができます。
+例えば、本リポジトリには `README.md` ファイルが含まれていますが、これは HTML 化される必要がないので、ビルド対象にしたくありません。このような場合、`exclude` でビルド対象から除外したいファイルを指定することができます。
 
 ```yml
 exclude:
   - README.md
 ```
 
-### コンテンツの追加
+## コンテンツのビルド
 
-試しに、本リポジトリをコンテンツとして `homepage` リポジトリの `gh-pages` ブランチに追加してビルドしてみましょう。CI と連携させるかさせないかで手順の量が少し違います。
+試しに、本リポジトリのコンテンツを `pages-example` リポジトリにビルドしてみましょう。CI と連携させるかさせないかで、Pages の生成元ブランチや手順の量が異なることに注意してください。
 
-* [Sample 1 までを追加する方法 (CI 連携なし)](./sample_001.html)
-* [Sample 2 までを追加する方法 (CI 連携あり)](./sample_002.html)
+* [Sample 1 までを追加する方法](./sample_001.html)
+    - CI と連携することなく、`master` ブランチに存在する Markdown ファイルを GitHub Pages のビルド機能を用いてビルドさせ、HTML 化します。
+    - 設定事項が少ないのでこちらのほうが簡単にできます。
+* [Sample 2 までを追加する方法](./sample_002.html)
+    - CI と連携し、`master` ブランチに存在する、自作プラグインも用いた Markdown ファイルを `gh-pages` ブランチに push して HTML 化します。GitHub Pages のビルド機能は使用しません。
+    - CI を利用するための設定が必要なので、Sample 1 よりも準備することは多いです。

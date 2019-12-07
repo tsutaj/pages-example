@@ -15,19 +15,23 @@ exclude:
   - .bundle
   - .gitignore
   - .sass-cache
+  # - sample_002.md # Sample 1 のビルド時にコメントアウトを外す
 
 # リポジトリに関する情報を書く (Sample 2 のビルドに必要)
-username: tsutaj
-repo: pages-example
+username: tsutaj # 自分の GitHub ユーザー名
+repo: pages-example # リポジトリ名
 destination: _site/
 
-# ///// 以下はリポジトリの都合上書いているだけ (Getting Started では説明しません) /////
+# /// 以下はリポジトリの都合上書いている (Getting Started では説明しません) ///
 adc_url: 'https://adventar.org/calendars/3865'
 adc_article_url: '#'
 
+# baseurl は、基本的にリポジトリ名と一致させる
+# リポジトリ名が [username].github.io の場合は baseurl = '/' とする
 baseurl: '/pages-example/'
 show_downloads: true
 
+# 適宜、自分の情報に書き換えましょう
 title: 'pages-example'
 description: 'Competitive Programming Advent Calendar 2019 用のリポジトリ'
 

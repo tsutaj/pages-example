@@ -11,21 +11,15 @@ title: Sample 1
 
 ## ビルド方法
 
-`homepage` リポジトリにおいてまだ `gh-pages` ブランチを作成していない場合は作成し、ブランチをうつしてください。
+Sample 2 は CI と連携しなければビルドできないため、Sample 2 の Markdown ファイルをビルド対象から除外します。`_config.yml` を開き、 `exclude: sample_002.md` のコメントアウトを外してください。
 
-```sh
-$ git checkout -b gh-pages
-```
+また、GitHub Pages の生成元ブランチを編集します。自分のリポジトリのページに行き、「Settings」タブをクリックします。すると「GitHub Pages」という項目がありますので、ここの「Source」を `master branch` に設定します。
 
-Sample 2 は CI と連携しなければビルドできないため、README に加えて Sample 2 もビルド対象から除外します。`_config.yml` の `exclude` を以下のように変更してください。
+![生成元ブランチの編集画面](./assets/img/s1-001.png)
 
-```yml
-exclude:
-  - README.md
-  - sample_002.md
-```
+`_config.yml` では自分のユーザー名やリポジトリ名などを指定する必要があるので、適宜自分の情報に差し替えてご利用ください。
 
-あとは、本リポジトリの中身を全て `gh-pages` ブランチに push しましょう。
+あとは、本リポジトリの中身を全て `master` ブランチに push しましょう。
 
 ```sh
 $ git add [files]
@@ -33,7 +27,7 @@ $ git commit -m "add contents until Sample 1"
 $ git push -u origin HEAD
 ```
 
-うまくいけば、`https://[username].github.io/homepage/` にビルドされるはずです。Sample 2 はまだビルドしていないため、リンクを踏んでも 404 になります。
+うまくいけば、`https://[username].github.io/pages-example/` にビルドされるはずです。Sample 2 はまだビルドしていないため、リンクを踏んでも 404 になります。
 
 ## おまけ: Markdown 記法テスト
 
