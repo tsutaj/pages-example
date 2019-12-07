@@ -4,6 +4,8 @@ layout: default
 
 ## GitHub Pages Samples for [Competitive Programming (1) Advent Calendar 2019]({{ site.adc_url }})
 
+[![Build Status](https://travis-ci.com/tsutaj/pages-example.svg?token=RTSKP4EqAJvDsfqpp8fy&branch=master)](https://travis-ci.com/tsutaj/pages-example)
+
 * [記事へのリンク]({{ site.adc_article_url }})
 
 ## 本リポジトリの目的
