@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Sample 1
 ---
 
 # GitHub Pages Sample 1

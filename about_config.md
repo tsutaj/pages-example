@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Config
 ---
 
 # `_config.yml` の設定について
