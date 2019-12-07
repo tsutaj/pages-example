@@ -25,7 +25,7 @@ GitHub アカウントを持っていない人は [GitHub に登録](https://git
     - 例えば `repo` という名前のリポジトリを作ると、各ページは `https://[username].github.io/[repo]/` 直下にビルドされます。
     - サイトの公開元が `master` や `gh-pages` などから選べます (`gh-pages` というブランチが存在する場合、それがデフォルトで選択されます)
 
-ここでは `homepage` というリポジトリを作成し、`gh-pages` に push することを考えます (つまり後者の方法です)
+ここでは `homepage` というリポジトリを作成し、`gh-pages` に push することを考えます (つまり後者の命名方法です)
 
 ### `_config.yml` の追加
 

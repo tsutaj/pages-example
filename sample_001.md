@@ -7,7 +7,7 @@ title: Sample 1
 
 自分で Jekyll の機能を拡張しない場合、CI との連携は特に必要ありません。GitHub Pages 側で勝手にビルドして HTML 化してくれるためです。
 
-では、実際に Sample 1 までをビルドしてみましょう。
+では、実際に Sample 1 までをビルドしてみましょう。([Getting Started](./getting_started.html) を読んでいない場合は先にそちらをお読みください)
 
 ## ビルド方法
 
