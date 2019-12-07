@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 ---
 
 # `_config.yml` の設定について
