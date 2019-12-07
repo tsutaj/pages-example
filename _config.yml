@@ -10,4 +10,5 @@ exclude:
   - README.md
 
 # ///// 以下はリポジトリの都合上書いているだけなので、コピペ不要な箇所です /////
+adc_url: 'https://adventar.org/calendars/3865'
 adc_article_url: '#'
