@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Sample 1 | pages-example</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="Sample 1" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Competitive Programming Advent Calendar 2019 用のリポジトリ" />
+<meta property="og:description" content="Competitive Programming Advent Calendar 2019 用のリポジトリ" />
+<meta property="og:site_name" content="pages-example" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"/sample_001.html","headline":"Sample 1","description":"Competitive Programming Advent Calendar 2019 用のリポジトリ","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="/">pages-example</a></h1>
+        
+        
+
+        <p>Competitive Programming Advent Calendar 2019 用のリポジトリ</p>
+
+        
+        <p class="view"><a href="https://github.com/tsutaj/pages-example/">View the Project on GitHub <small>tsutaj/pages-example</small></a></p>
+        
+
+        
+
+        
+        <ul>
+          <li><a href="https://github.com/tsutaj/pages-example/archive/master.zip">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/tsutaj/pages-example/archive/master.tar.gz">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/tsutaj/pages-example/">View On <strong>GitHub</strong></a></li>
+        </ul>
+        
+      </header>
+      <section>
+
+      <h1 id="sample-1-ci-連携なし">Sample 1: CI 連携なし</h1>
+
+<p>自分で Jekyll の機能を拡張しない場合、CI との連携は特に必要ありません。GitHub Pages 側で勝手にビルドして HTML 化してくれるためです。</p>
+
+<p>では、実際に Sample 1 までをビルドしてみましょう。(<a href="./getting_started.html">Getting Started</a> を読んでいない場合は先にそちらをお読みください)</p>
+
+<h2 id="ビルド方法">ビルド方法</h2>
+
+<p><code class="highlighter-rouge">homepage</code> リポジトリにおいてまだ <code class="highlighter-rouge">gh-pages</code> ブランチを作成していない場合は作成し、ブランチをうつしてください。</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git checkout <span class="nt">-b</span> gh-pages
+</code></pre></div></div>
+
+<p>Sample 2 は CI と連携しなければビルドできないため、README に加えて Sample 2 もビルド対象から除外します。<code class="highlighter-rouge">_config.yml</code> の <code class="highlighter-rouge">exclude</code> を以下のように変更してください。</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">exclude</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">README.md</span>
+  <span class="pi">-</span> <span class="s">sample_002.md</span>
+</code></pre></div></div>
+
+<p>あとは、本リポジトリの中身を全て <code class="highlighter-rouge">gh-pages</code> ブランチに push しましょう。</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git add <span class="o">[</span>files]
+<span class="nv">$ </span>git commit <span class="nt">-m</span> <span class="s2">"add contents until Sample 1"</span>
+<span class="nv">$ </span>git push <span class="nt">-u</span> origin HEAD
+</code></pre></div></div>
+
+<p>うまくいけば、<code class="highlighter-rouge">https://[username].github.io/homepage/</code> にビルドされるはずです。Sample 2 はまだビルドしていないため、リンクを踏んでも 404 になります。</p>
+
+<h2 id="おまけ-markdown-記法テスト">おまけ: Markdown 記法テスト</h2>
+
+<p>以下は Markdown 記法テストです。主な記法を知りたい方は、<a href="https://gist.github.com/mignonstyle/083c9e1651d7734f84c99b8cf49d57fa">Markdown 記法 チートシート</a> などを参考にしてください。</p>
+
+<h1 id="見出し-1">見出し 1</h1>
+<h2 id="見出し-2">見出し 2</h2>
+<h3 id="見出し-3">見出し 3</h3>
+<h4 id="見出し-4">見出し 4</h4>
+<h5 id="見出し-5">見出し 5</h5>
+<h6 id="見出し-6">見出し 6</h6>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">左揃えのサンプル</th>
+      <th style="text-align: center">中央揃えのサンプル</th>
+      <th style="text-align: right">右揃えのサンプル</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">テキスト</td>
+      <td style="text-align: center">テキスト</td>
+      <td style="text-align: right">テキスト</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>箇条書き 1
+    <ul>
+      <li>箇条書き 2
+        <ul>
+          <li>箇条書き 3</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<ol>
+  <li>ナンバリング 1</li>
+  <li>ナンバリング 2</li>
+  <li>ナンバリング 3</li>
+</ol>
+
+<p><strong>太字</strong> <em>斜体</em> <del>取り消し線</del></p>
+
+<p><span style="color:red;">HTML タグなどを直に書いても良いです</span></p>
+
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/tsutaj/">tsutaj</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+    
+  </body>
+</html>

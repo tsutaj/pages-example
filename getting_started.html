@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Getting Started | pages-example</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="Getting Started" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Competitive Programming Advent Calendar 2019 用のリポジトリ" />
+<meta property="og:description" content="Competitive Programming Advent Calendar 2019 用のリポジトリ" />
+<meta property="og:site_name" content="pages-example" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"/getting_started.html","headline":"Getting Started","description":"Competitive Programming Advent Calendar 2019 用のリポジトリ","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="/">pages-example</a></h1>
+        
+        
+
+        <p>Competitive Programming Advent Calendar 2019 用のリポジトリ</p>
+
+        
+        <p class="view"><a href="https://github.com/tsutaj/pages-example/">View the Project on GitHub <small>tsutaj/pages-example</small></a></p>
+        
+
+        
+
+        
+        <ul>
+          <li><a href="https://github.com/tsutaj/pages-example/archive/master.zip">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/tsutaj/pages-example/archive/master.tar.gz">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/tsutaj/pages-example/">View On <strong>GitHub</strong></a></li>
+        </ul>
+        
+      </header>
+      <section>
+
+      <h1 id="getting-started">Getting Started</h1>
+
+<p><a href="https://help.github.com/ja/github/working-with-github-pages/about-github-pages">GitHub Pages</a> と、それに組み込まれている静的サイトジェネレータである <a href="https://jekyllrb.com/">Jekyll</a> を利用して、Markdown を HTML 化してホームページを作成してみましょう。</p>
+
+<ul id="markdown-toc">
+  <li>
+<a href="#getting-started" id="markdown-toc-getting-started">Getting Started</a>    <ul>
+      <li>
+<a href="#%E6%BA%96%E5%82%99" id="markdown-toc-準備">準備</a>        <ul>
+          <li><a href="#%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%81%AE%E4%BD%9C%E6%88%90" id="markdown-toc-リポジトリの作成">リポジトリの作成</a></li>
+          <li>
+<a href="#_configyml-%E3%81%AE%E8%BF%BD%E5%8A%A0" id="markdown-toc-_configyml-の追加"><code class="highlighter-rouge">_config.yml</code> の追加</a>            <ul>
+              <li><a href="#%E3%83%86%E3%83%BC%E3%83%9E%E3%81%AE%E8%A8%AD%E5%AE%9A" id="markdown-toc-テーマの設定">テーマの設定</a></li>
+              <li><a href="#%E7%B5%B5%E6%96%87%E5%AD%97%E3%81%AE%E8%A1%A8%E7%A4%BA" id="markdown-toc-絵文字の表示">絵文字の表示</a></li>
+              <li><a href="#%E7%89%B9%E5%AE%9A%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E3%83%93%E3%83%AB%E3%83%89%E5%AF%BE%E8%B1%A1%E3%81%8B%E3%82%89%E9%99%A4%E5%A4%96" id="markdown-toc-特定ファイルをビルド対象から除外">特定ファイルをビルド対象から除外</a></li>
+            </ul>
+          </li>
+          <li><a href="#%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%81%AE%E8%BF%BD%E5%8A%A0" id="markdown-toc-コンテンツの追加">コンテンツの追加</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="準備">準備</h2>
+
+<p>GitHub アカウントを持っていない人は <a href="https://github.com/join">GitHub に登録</a> してください。以降、<code class="highlighter-rouge">username</code> というアカウントを持っているものとして説明を続けます。</p>
+
+<h3 id="リポジトリの作成">リポジトリの作成</h3>
+
+<p>ホームページ用のリポジトリを作ります。リポジトリ名は割と重要で、大きく分けて以下の二種類のいずれかで命名することになります。詳しくは <a href="https://help.github.com/ja/github/working-with-github-pages/about-github-pages">GitHub Pages について</a> などを参考にしてください。</p>
+
+<ul>
+  <li>
+<code class="highlighter-rouge">[username].github.io</code> (ユーザサイト)
+    <ul>
+      <li>この名前でリポジトリを作ると、各ページは <code class="highlighter-rouge">https://[username].github.io/</code> 直下にビルドされます。</li>
+      <li>サイトの公開元は <strong>master ブランチしか選べない</strong> ので注意してください。</li>
+    </ul>
+  </li>
+  <li>上記以外 (プロジェクトサイト)
+    <ul>
+      <li>例えば <code class="highlighter-rouge">repo</code> という名前のリポジトリを作ると、各ページは <code class="highlighter-rouge">https://[username].github.io/[repo]/</code> 直下にビルドされます。</li>
+      <li>サイトの公開元が <code class="highlighter-rouge">master</code> や <code class="highlighter-rouge">gh-pages</code> などから選べます (<code class="highlighter-rouge">gh-pages</code> というブランチが存在する場合、それがデフォルトで選択されます)</li>
+    </ul>
+  </li>
+</ul>
+
+<p>ここでは <code class="highlighter-rouge">homepage</code> というリポジトリを作成し、<code class="highlighter-rouge">gh-pages</code> に push することを考えます (つまり後者の命名方法です)</p>
+
+<h3 id="_configyml-の追加">
+<code class="highlighter-rouge">_config.yml</code> の追加</h3>
+
+<p>GitHub Pages で使用している静的サイトジェネレーター Jekyll の設定をするために <code class="highlighter-rouge">_config.yml</code> というファイルを作成します。ここで解説されている設定事項はほんの一部分ですので、もっと見たい方は <a href="http://jekyllrb-ja.github.io/docs/configuration/">構成・設定 | Jekyll</a> などを参照してください。</p>
+
+<p>また、ここに書かれている内容をすべてまとめたものは <a href="https://github.com/tsutaj/pages-example/blob/master/_config.yml">tsutaj/pages-example/_config.yml</a> にあります。</p>
+
+<h4 id="テーマの設定">テーマの設定</h4>
+
+<p>GitHub Pages において標準で用意されているテーマがいくつか存在します。一覧は <a href="https://pages.github.com/themes/">Supported themes | GitHub Pages</a> を参照してください。</p>
+
+<p>ここでは <code class="highlighter-rouge">minimal</code> テーマを設定します。以下のように書けば終わりです。</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">theme</span><span class="pi">:</span> <span class="s">jekyll-theme-minimal</span>
+</code></pre></div></div>
+
+<p>標準で用意されていないテーマを使用することもできます。詳しくは <a href="https://help.github.com/ja/github/working-with-github-pages/adding-a-theme-to-your-github-pages-site-using-jekyll">Jekyll を使用して GitHub Pages サイトにテーマを追加する - GitHub ヘルプ</a> を参照してください。</p>
+
+<h4 id="絵文字の表示">絵文字の表示</h4>
+
+<p>Jekyll には絵文字を表示する機能を持つプラグイン (<a href="https://github.com/jekyll/jemoji">jemoji</a>) があります。これを import することで絵文字を表示できます <img class="emoji" title=":tada:" alt=":tada:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png" height="20" width="20"></p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">plugins</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">jemoji</span>
+</code></pre></div></div>
+
+<h4 id="特定ファイルをビルド対象から除外">特定ファイルをビルド対象から除外</h4>
+
+<p>本リポジトリには <code class="highlighter-rouge">README.md</code> ファイルが含まれていますが、これは HTML 化される必要がなく、ビルド対象にしたくありません。このような場合、<code class="highlighter-rouge">exclude</code> でビルド対象から除外したいファイルを指定することができます。</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">exclude</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">README.md</span>
+</code></pre></div></div>
+
+<h3 id="コンテンツの追加">コンテンツの追加</h3>
+
+<p>試しに、本リポジトリをコンテンツとして <code class="highlighter-rouge">homepage</code> リポジトリの <code class="highlighter-rouge">gh-pages</code> ブランチに追加してビルドしてみましょう。CI と連携させるかさせないかで手順の量が少し違います。</p>
+
+<ul>
+  <li><a href="./sample_001.html">Sample 1 までを追加する方法 (CI 連携なし)</a></li>
+  <li><a href="./sample_002.html">Sample 2 までを追加する方法 (CI 連携あり)</a></li>
+</ul>
+
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/tsutaj/">tsutaj</a></p>
+        
+        <p><small>Hosted on GitHub Pages — Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+    
+  </body>
+</html>
