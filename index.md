@@ -2,11 +2,11 @@
 layout: default
 ---
 
-## GitHub Pages Samples for [Competitive Programming (1) Advent Calendar 2019]({{ site.adc_url }})
+## GitHub Pages Samples for Competitive Programming Advent Calendar 2019
 
 [![Build Status](https://travis-ci.com/tsutaj/pages-example.svg?token=RTSKP4EqAJvDsfqpp8fy&branch=master)](https://travis-ci.com/tsutaj/pages-example)
 
-* [記事へのリンク]({{ site.adc_article_url }})
+**このリポジトリは [Competitive Programming (1) Advent Calendar 2019]({{ site.adc_url }}) の 12 日目の記事「[HCPC のホームページを移行した話]({{ site.adc_article_url }})」の補助資料です。**
 
 ## 本リポジトリの目的
 

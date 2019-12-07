@@ -24,7 +24,7 @@ destination: _site/
 
 # /// 以下はリポジトリの都合上書いている (Getting Started では説明しません) ///
 adc_url: 'https://adventar.org/calendars/3865'
-adc_article_url: '#'
+adc_article_url: 'http://tsutaj.hatenablog.com/entry/2019/12/12/000000'
 
 # baseurl は、基本的にリポジトリ名と一致させる
 # リポジトリ名が [username].github.io の場合は baseurl = '/' とする
