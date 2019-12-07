@@ -1,6 +1,10 @@
 # テーマの選択
 theme: minima
+
+# 絵文字表示のためのプラグイン
+plugins:
+  - jemoji
+
 # ビルドの対象から除外するファイル
 exclude:
   - README.md
-
