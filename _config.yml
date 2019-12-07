@@ -8,12 +8,30 @@ plugins:
 # ビルドの対象から除外するファイル
 exclude:
   - README.md
+  - Gemfile
+  - Gemfile.lock
+  - .bundle
+  - .sass-cache
   - vendor
 
 # リポジトリに関する情報を書く (Sample 2 のビルドに必要)
 username: tsutaj
 repo: pages-example
 
-# ///// 以下はリポジトリの都合上書いているだけなので、コピペ不要な箇所です /////
+# ///// 以下はリポジトリの都合上書いているだけ (Getting Started では説明しません) /////
 adc_url: 'https://adventar.org/calendars/3865'
 adc_article_url: '#'
+show_downloads: true
+
+title: 'pages-example'
+description: 'Competitive Programming Advent Calendar 2019 用のリポジトリ'
+
+github:
+  is_project_page: true
+  repository_url: 'https://github.com/tsutaj/pages-example/'
+  repository_nwo: 'tsutaj/pages-example'
+  zip_url: 'https://github.com/tsutaj/pages-example/archive/master.zip'
+  tar_url: 'https://github.com/tsutaj/pages-example/archive/master.tar.gz'
+  owner_url: 'https://github.com/tsutaj/'
+  owner_name: 'tsutaj'
+
