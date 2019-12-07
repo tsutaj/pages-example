@@ -32,10 +32,10 @@ GitHub Pages で使用している静的サイトジェネレーター Jekyll �
 
 GitHub Pages において標準で用意されているテーマがいくつか存在します。一覧は [Supported themes \| GitHub Pages](https://pages.github.com/themes/) を参照してください。
 
-ここでは `minima` テーマを設定します。以下のように書けば終わりです。
+ここでは `minimal` テーマを設定します。以下のように書けば終わりです。
 
 ```yml
-theme: minima
+theme: jekyll-theme-minimal
 ```
 
 標準で用意されていないテーマを使用することもできます。詳しくは [Jekyll を使用して GitHub Pages サイトにテーマを追加する - GitHub ヘルプ](https://help.github.com/ja/github/working-with-github-pages/adding-a-theme-to-your-github-pages-site-using-jekyll) を参照してください。
