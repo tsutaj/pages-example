@@ -15,7 +15,7 @@ exclude:
   - .bundle
   - .gitignore
   - .sass-cache
-  # - sample_002.md # Sample 1 のビルド時にコメントアウトを外す
+  - sample_002.md # Sample 1 のビルド時にコメントアウトを外す
 
 # リポジトリに関する情報を書く (Sample 2 のビルドに必要)
 username: tsutaj # 自分の GitHub ユーザー名
