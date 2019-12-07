@@ -58,15 +58,15 @@
 <a href="#%E6%BA%96%E5%82%99" id="markdown-toc-準備">準備</a>        <ul>
           <li><a href="#%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%81%AE%E4%BD%9C%E6%88%90" id="markdown-toc-リポジトリの作成">リポジトリの作成</a></li>
           <li>
-<a href="#_configyml-%E3%81%AE%E8%BF%BD%E5%8A%A0" id="markdown-toc-_configyml-の追加"><code class="highlighter-rouge">_config.yml</code> の追加</a>            <ul>
+<a href="#_configyml-%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" id="markdown-toc-_configyml-について"><code class="highlighter-rouge">_config.yml</code> について</a>            <ul>
               <li><a href="#%E3%83%86%E3%83%BC%E3%83%9E%E3%81%AE%E8%A8%AD%E5%AE%9A" id="markdown-toc-テーマの設定">テーマの設定</a></li>
               <li><a href="#%E7%B5%B5%E6%96%87%E5%AD%97%E3%81%AE%E8%A1%A8%E7%A4%BA" id="markdown-toc-絵文字の表示">絵文字の表示</a></li>
               <li><a href="#%E7%89%B9%E5%AE%9A%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E3%83%93%E3%83%AB%E3%83%89%E5%AF%BE%E8%B1%A1%E3%81%8B%E3%82%89%E9%99%A4%E5%A4%96" id="markdown-toc-特定ファイルをビルド対象から除外">特定ファイルをビルド対象から除外</a></li>
             </ul>
           </li>
-          <li><a href="#%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%81%AE%E8%BF%BD%E5%8A%A0" id="markdown-toc-コンテンツの追加">コンテンツの追加</a></li>
         </ul>
       </li>
+      <li><a href="#%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%81%AE%E3%83%93%E3%83%AB%E3%83%89" id="markdown-toc-コンテンツのビルド">コンテンツのビルド</a></li>
     </ul>
   </li>
 </ul>
@@ -95,14 +95,12 @@
   </li>
 </ul>
 
-<p>ここでは <code class="highlighter-rouge">homepage</code> というリポジトリを作成し、<code class="highlighter-rouge">gh-pages</code> に push することを考えます (つまり後者の命名方法です)</p>
+<p>ここでは <code class="highlighter-rouge">pages-example</code> というリポジトリを作成し、<code class="highlighter-rouge">master</code> に push することを考えます (つまり後者の命名方法です)</p>
 
-<h3 id="_configyml-の追加">
-<code class="highlighter-rouge">_config.yml</code> の追加</h3>
+<h3 id="_configyml-について">
+<code class="highlighter-rouge">_config.yml</code> について</h3>
 
-<p>GitHub Pages で使用している静的サイトジェネレーター Jekyll の設定をするために <code class="highlighter-rouge">_config.yml</code> というファイルを作成します。ここで解説されている設定事項はほんの一部分ですので、もっと見たい方は <a href="http://jekyllrb-ja.github.io/docs/configuration/">構成・設定 | Jekyll</a> などを参照してください。</p>
-
-<p>また、ここに書かれている内容をすべてまとめたものは <a href="https://github.com/tsutaj/pages-example/blob/master/_config.yml">tsutaj/pages-example/_config.yml</a> にあります。</p>
+<p>GitHub Pages で使用している静的サイトジェネレーター Jekyll の設定をするために <code class="highlighter-rouge">_config.yml</code> というファイルを作成します (実際にはすでにこのリポジトリに存在するため、1 から作る必要はありません)。ここで解説されている設定事項はほんの一部分ですので、もっと見たい方は <a href="http://jekyllrb-ja.github.io/docs/configuration/">構成・設定 | Jekyll</a> などを参照してください。</p>
 
 <h4 id="テーマの設定">テーマの設定</h4>
 
@@ -125,19 +123,31 @@
 
 <h4 id="特定ファイルをビルド対象から除外">特定ファイルをビルド対象から除外</h4>
 
-<p>本リポジトリには <code class="highlighter-rouge">README.md</code> ファイルが含まれていますが、これは HTML 化される必要がなく、ビルド対象にしたくありません。このような場合、<code class="highlighter-rouge">exclude</code> でビルド対象から除外したいファイルを指定することができます。</p>
+<p>例えば、本リポジトリには <code class="highlighter-rouge">README.md</code> ファイルが含まれていますが、これは HTML 化される必要がないので、ビルド対象にしたくありません。このような場合、<code class="highlighter-rouge">exclude</code> でビルド対象から除外したいファイルを指定することができます。</p>
 
 <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">exclude</span><span class="pi">:</span>
   <span class="pi">-</span> <span class="s">README.md</span>
 </code></pre></div></div>
 
-<h3 id="コンテンツの追加">コンテンツの追加</h3>
+<h2 id="コンテンツのビルド">コンテンツのビルド</h2>
 
-<p>試しに、本リポジトリをコンテンツとして <code class="highlighter-rouge">homepage</code> リポジトリの <code class="highlighter-rouge">gh-pages</code> ブランチに追加してビルドしてみましょう。CI と連携させるかさせないかで手順の量が少し違います。</p>
+<p>試しに、本リポジトリのコンテンツを <code class="highlighter-rouge">pages-example</code> リポジトリにビルドしてみましょう。CI と連携させるかさせないかで、Pages の生成元ブランチや手順の量が異なることに注意してください。</p>
 
 <ul>
-  <li><a href="./sample_001.html">Sample 1 までを追加する方法 (CI 連携なし)</a></li>
-  <li><a href="./sample_002.html">Sample 2 までを追加する方法 (CI 連携あり)</a></li>
+  <li>
+<a href="./sample_001.html">Sample 1 までを追加する方法</a>
+    <ul>
+      <li>CI と連携することなく、<code class="highlighter-rouge">master</code> ブランチに存在する Markdown ファイルを GitHub Pages のビルド機能を用いてビルドさせ、HTML 化します。</li>
+      <li>設定事項が少ないのでこちらのほうが簡単にできます。</li>
+    </ul>
+  </li>
+  <li>
+<a href="./sample_002.html">Sample 2 までを追加する方法</a>
+    <ul>
+      <li>CI と連携し、<code class="highlighter-rouge">master</code> ブランチに存在する、自作プラグインも用いた Markdown ファイルを <code class="highlighter-rouge">gh-pages</code> ブランチに push して HTML 化します。GitHub Pages のビルド機能は使用しません。</li>
+      <li>CI を利用するための設定が必要なので、Sample 1 よりも準備することは多いです。</li>
+    </ul>
+  </li>
 </ul>
 
 

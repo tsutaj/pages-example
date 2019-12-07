@@ -55,26 +55,22 @@
 
 <h2 id="ビルド方法">ビルド方法</h2>
 
-<p><code class="highlighter-rouge">homepage</code> リポジトリにおいてまだ <code class="highlighter-rouge">gh-pages</code> ブランチを作成していない場合は作成し、ブランチをうつしてください。</p>
+<p>Sample 2 は CI と連携しなければビルドできないため、Sample 2 の Markdown ファイルをビルド対象から除外します。<code class="highlighter-rouge">_config.yml</code> を開き、 <code class="highlighter-rouge">exclude: sample_002.md</code> のコメントアウトを外してください。</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git checkout <span class="nt">-b</span> gh-pages
-</code></pre></div></div>
+<p>また、GitHub Pages の生成元ブランチを編集します。自分のリポジトリのページに行き、「Settings」タブをクリックします。すると「GitHub Pages」という項目がありますので、ここの「Source」を <code class="highlighter-rouge">master branch</code> に設定します。</p>
 
-<p>Sample 2 は CI と連携しなければビルドできないため、README に加えて Sample 2 もビルド対象から除外します。<code class="highlighter-rouge">_config.yml</code> の <code class="highlighter-rouge">exclude</code> を以下のように変更してください。</p>
+<p><img src="./assets/img/s1-001.png" alt="生成元ブランチの編集画面" /></p>
 
-<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">exclude</span><span class="pi">:</span>
-  <span class="pi">-</span> <span class="s">README.md</span>
-  <span class="pi">-</span> <span class="s">sample_002.md</span>
-</code></pre></div></div>
+<p><code class="highlighter-rouge">_config.yml</code> では自分のユーザー名やリポジトリ名などを指定する必要があるので、適宜自分の情報に差し替えてご利用ください。</p>
 
-<p>あとは、本リポジトリの中身を全て <code class="highlighter-rouge">gh-pages</code> ブランチに push しましょう。</p>
+<p>あとは、本リポジトリの中身を全て <code class="highlighter-rouge">master</code> ブランチに push しましょう。</p>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git add <span class="o">[</span>files]
 <span class="nv">$ </span>git commit <span class="nt">-m</span> <span class="s2">"add contents until Sample 1"</span>
 <span class="nv">$ </span>git push <span class="nt">-u</span> origin HEAD
 </code></pre></div></div>
 
-<p>うまくいけば、<code class="highlighter-rouge">https://[username].github.io/homepage/</code> にビルドされるはずです。Sample 2 はまだビルドしていないため、リンクを踏んでも 404 になります。</p>
+<p>うまくいけば、<code class="highlighter-rouge">https://[username].github.io/pages-example/</code> にビルドされるはずです。Sample 2 はまだビルドしていないため、リンクを踏んでも 404 になります。</p>
 
 <h2 id="おまけ-markdown-記法テスト">おまけ: Markdown 記法テスト</h2>
 
