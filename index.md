@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: default
 ---
 
 # GitHub Pages Samples for [Competitive Programming (1) Advent Calendar 2019]({{ site.adc_url }})

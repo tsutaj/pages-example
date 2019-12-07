@@ -1,5 +1,5 @@
 # テーマの選択
-theme: minimal
+theme: jekyll-theme-minimal
 
 # 絵文字表示のためのプラグイン
 plugins:
