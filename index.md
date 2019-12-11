@@ -31,4 +31,4 @@ GitHub Pages を活用した Markdown ファイルの HTML ビルドを体験し
 
 ## 連絡先
 
-tsutaj (Twitter: [@\_TTJR\_](https://twitter.com/_TTJR_))
+tsutaj (Twitter: [@tsutaj](https://twitter.com/tsutaj))
